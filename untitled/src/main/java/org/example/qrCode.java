@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class qrCode {
-  public static void main(String[] args) {
-    String qrText = "https://google.com"; // Texte ou URL à encoder
+
+  public static void genererQrCode(String qrText){
     String filePath = "qrcode.png"; // Chemin pour sauvegarder le QR Code
     int width = 250;
     int height = 250;
