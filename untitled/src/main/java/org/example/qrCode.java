@@ -1,3 +1,5 @@
+package org.example;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.QRCodeWriter;
@@ -8,7 +10,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
-public class QRCodeGenerator {
+public class qrCode {
   public static void main(String[] args) {
     String qrText = "https://example.com"; // Texte ou URL à encoder
     String filePath = "qrcode.png"; // Chemin pour sauvegarder le QR Code
