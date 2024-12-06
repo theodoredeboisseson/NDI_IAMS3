@@ -25,148 +25,126 @@
 </head>
 
 <body>
-<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
-  <div class="nav-container">
-    <!-- Logo et titre -->
-    <div class="flex items-center">
-      <img class="bg-white h-20 rounded-full p-2" src="img/logoSite.png" alt="Logo du site">
-      <h1 class="site-title">IAMS3</h1>
+  <header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+    <div class="nav-container">
+      <!-- Logo et titre -->
+      <div class="flex items-center">
+        <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
+        <h1 class="site-title">IAMS3</h1>
+      </div>
+
+      <!-- Menu principal avec sous-menu -->
+      <nav class="hidden md:flex space-x-4 items-center">
+        <a href="#" class="link-primary" aria-current="page">Accueil</a>
+        <a href="#">À propos</a>
+        <a href="#">Reports</a>
+        <!-- Menu déroulant -->
+        <div class="relative">
+          <a href="#" class="flex items-center">
+            Sommaire
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+            </svg>
+          </a>
+          <div class="submenu absolute">
+            <a href="page3.html">Page n°3</a>
+            <a href="page4.html">Page n°4</a>
+            <a href="page5.html">Page n°5</a>
+          </div>
+        </div>
+        <a href="contact.html" class="link-secondary">Contact</a>
+      </nav>
     </div>
 
-    <!-- Menu principal avec sous-menu -->
-    <nav class="hidden md:flex space-x-4 items-center">
+    <!-- Menu responsive -->
+    <nav class="mobile-menu md:hidden flex-row">
       <a href="#" class="link-primary" aria-current="page">Dashboard</a>
       <a href="#" class="">Team</a>
       <a href="#" class="">Projects</a>
       <a href="#" class="">Calendar</a>
       <a href="#" class="">Reports</a>
-      <!-- Menu déroulant -->
-      <div class="relative group">
-        <a href="#" class="link-secondary sommaire">
-          Sommaire
-          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
-          </svg>
-        </a>
-        <ul class="sous absolute">
+      <div>
+        <a href="#" class="sommaire">Sommaire</a>
+        <ul class="submenu">
           <li><a href="page3.html">Page n°3</a></li>
           <li><a href="page4.html">Page n°4</a></li>
           <li><a href="page5.html">Page n°5</a></li>
         </ul>
       </div>
-      <a href="contact.html" class="link-secondary">Contact</a>
+      <a href="contact.html" class="">Contact</a>
     </nav>
-  </div>
+  </header>
 
-  <!-- Menu responsive -->
-  <nav class="mobile-menu md:hidden flex-row">
-    <a href="#" class="link-primary" aria-current="page">Dashboard</a>
-    <a href="#" class="">Team</a>
-    <a href="#" class="">Projects</a>
-    <a href="#" class="">Calendar</a>
-    <a href="#" class="">Reports</a>
-    <div>
-      <a href="#" class="sommaire">Sommaire</a>
-      <ul class="sous">
-        <li><a href="page3.html">Page n°3</a></li>
-        <li><a href="page4.html">Page n°4</a></li>
-        <li><a href="page5.html">Page n°5</a></li>
-      </ul>
-    </div>
-    <a href="contact.html" class="">Contact</a>
-  </nav>
-</header>
+  <main class="flex-grow text-center">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Protégeons nos océans</h2>
+        <p>Ensemble, faisons la différence face au réchauffement climatique.</p>
+        <a href="#about" class="btn">En savoir plus</a>
+      </div>
+    </section>
 
-<!--<header class="flex p-4 items-center justify-between mx-10">-->
-<!--  <nav>-->
-<!--    <ul class="flex gap-4 ml-4">-->
-<!--      <li class="list-none text-white"><a href="#home">Accueil</a></li>-->
-<!--      <li class="list-none text-white"><a href="#about">À propos</a></li>-->
-<!--      <li class="list-none text-white"><a href="#facts">Données</a></li>-->
-<!--      <li class="list-none text-white"><a href="#actions">Actions</a></li>-->
-<!--      <li class="list-none text-white"><a href="#contact">Contact</a></li>-->
-<!--    </ul>-->
-<!--  </nav>-->
-<!--  <div>-->
-<!--    <button class="bg-white rounded px-4 py-1">Contact</button>-->
-<!--  </div>-->
-<!--</header>-->
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>À propos</h2>
+        <div class="about-content">
+          <p>Les océans jouent un rôle clé dans l'équilibre climatique. Découvrez comment notre projet sensibilise aux impacts du réchauffement climatique.</p>
+          <img src="images/ocean-illustration.png" alt="Illustration des océans">
+        </div>
+      </div>
+    </section>
 
-<!--<main>-->
-<!--&lt;!&ndash; Hero Section &ndash;&gt;-->
-<!--<section id="home" class="hero">-->
-<!--  <div class="hero-content">-->
-<!--    <h2>Protégeons nos océans</h2>-->
-<!--    <p>Ensemble, faisons la différence face au réchauffement climatique.</p>-->
-<!--    <a href="#about" class="btn">En savoir plus</a>-->
-<!--  </div>-->
-<!--</section>-->
+    <!-- Facts Section -->
+    <section id="facts">
+      <div class="container">
+        <h2>Chiffres clés</h2>
+        <div class="facts-grid">
+          <div class="fact-item">
+            <h3>70%</h3>
+            <p>de l'oxygène provient des océans.</p>
+          </div>
+          <div class="fact-item">
+            <h3>1°C</h3>
+            <p>augmentation moyenne de la température mondiale.</p>
+          </div>
+          <div class="fact-item">
+            <h3>90%</h3>
+            <p>des grandes espèces marines sont en danger.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!--&lt;!&ndash; About Section &ndash;&gt;-->
-<!--<section id="about">-->
-<!--  <div class="container">-->
-<!--    <h2>À propos</h2>-->
-<!--    <div class="about-content">-->
-<!--      <p>Les océans jouent un rôle clé dans l'équilibre climatique. Découvrez comment notre projet sensibilise aux impacts du réchauffement climatique.</p>-->
-<!--      <img src="images/ocean-illustration.png" alt="Illustration des océans">-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+    <!-- Actions Section -->
+    <section id="actions">
+      <div class="container">
+        <h2>Nos actions</h2>
+        <div class="actions-grid">
+          <div class="action-item">
+            <h3>Nettoyage des plages</h3>
+            <p>Organisez ou participez à des initiatives locales.</p>
+          </div>
+          <div class="action-item">
+            <h3>Sensibilisation</h3>
+            <p>Partagez l'importance des océans autour de vous.</p>
+          </div>
+          <div class="action-item">
+            <h3>Réduction des déchets</h3>
+            <p>Adoptez des pratiques écoresponsables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!--&lt;!&ndash; Facts Section &ndash;&gt;-->
-<!--<section id="facts">-->
-<!--  <div class="container">-->
-<!--    <h2>Chiffres clés</h2>-->
-<!--    <div class="facts-grid">-->
-<!--      <div class="fact-item">-->
-<!--        <h3>70%</h3>-->
-<!--        <p>de l'oxygène provient des océans.</p>-->
-<!--      </div>-->
-<!--      <div class="fact-item">-->
-<!--        <h3>1°C</h3>-->
-<!--        <p>augmentation moyenne de la température mondiale.</p>-->
-<!--      </div>-->
-<!--      <div class="fact-item">-->
-<!--        <h3>90%</h3>-->
-<!--        <p>des grandes espèces marines sont en danger.</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-<!--&lt;!&ndash; Actions Section &ndash;&gt;-->
-<!--<section id="actions">-->
-<!--  <div class="container">-->
-<!--    <h2>Nos actions</h2>-->
-<!--    <div class="actions-grid">-->
-<!--      <div class="action-item">-->
-<!--        <h3>Nettoyage des plages</h3>-->
-<!--        <p>Organisez ou participez à des initiatives locales.</p>-->
-<!--      </div>-->
-<!--      <div class="action-item">-->
-<!--        <h3>Sensibilisation</h3>-->
-<!--        <p>Partagez l'importance des océans autour de vous.</p>-->
-<!--      </div>-->
-<!--      <div class="action-item">-->
-<!--        <h3>Réduction des déchets</h3>-->
-<!--        <p>Adoptez des pratiques écoresponsables.</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--  </main>-->
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
-<!--<footer>-->
-<!--  <div class="container">-->
-<!--    <p>&copy; 2024 IAMS3 - Tous droits réservés.</p>-->
-<!--    <div class="social-links">-->
-<!--      <a href="#">Facebook</a>-->
-<!--      <a href="#">Twitter</a>-->
-<!--      <a href="#">Instagram</a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</footer>-->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <footer class="waves">
+    <div class="wave opacity-25   bottom-4" id="wave1"></div>
+    <div class="wave opacity-50   bottom-6" id="wave2"></div>
+    <div class="wave opacity-75   bottom-2" id="wave3"></div>
+    <div class="wave opacity-100  bottom-0" id="wave4"></div>
+  </footer>
 
   <script src="js/app.js"></script>
 </body>
