@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="./css/output.css">
+
+    <meta charset="utf-8">
+  </head>
+<body class=" w-full">
+<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+  <div class="nav-container">
+    <!-- Logo et titre -->
+    <div class="flex items-center">
+      <a href="index.html"><img class="bg-white h-20 rounded-full p-2" src="img/logoSite.png" alt="Logo du site"></a>
+      <a href="index.html"><h1 class="site-title">IAMS3</h1></a>
+    </div>
+
+    <!-- Menu principal avec sous-menu -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+      <a href="#" class="">Team</a>
+      <a href="#" class="">Projects</a>
+      <a href="#" class="">Calendar</a>
+      <a href="#" class="">Reports</a>
+      <!-- Menu déroulant -->
+      <div class="relative group">
+        <a href="#" class="link-secondary sommaire">
+          Sommaire
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+          </svg>
+        </a>
+        <ul class="sous absolute">
+          <li><a href="page3.html">Page n°3</a></li>
+          <li><a href="page4.html">Page n°4</a></li>
+          <li><a href="page5.html">Page n°5</a></li>
+        </ul>
+      </div>
+      <a href="contact.html" class="link-secondary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Menu responsive -->
+  <nav class="mobile-menu md:hidden flex-row">
+    <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+    <a href="#" class="">Team</a>
+    <a href="#" class="">Projects</a>
+    <a href="#" class="">Calendar</a>
+    <a href="#" class="">Reports</a>
+    <div>
+      <a href="#" class="sommaire">Sommaire</a>
+      <ul class="sous">
+        <li><a href="page3.html">Page n°3</a></li>
+        <li><a href="page4.html">Page n°4</a></li>
+        <li><a href="page5.html">Page n°5</a></li>
+      </ul>
+    </div>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+</header>
+<main class="w-full">
+  <section id="thank-you" class="flex">
+    <div class="container">
+      <br><br>
+      <h2 class="font-bold w-full text-xl">Merci de nous avoir contacté!</h2>
+      <p>Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.</p>
+      <br><br>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2024 IAMS3 - Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

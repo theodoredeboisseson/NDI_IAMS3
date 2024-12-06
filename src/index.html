@@ -17,27 +17,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Océans et Climat - IAMS3</title>
   <link rel="stylesheet" href="./css/output.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-cyan-950">
-<header>
-  <div class="container">
-    <div class="logo">
-      <img class="bg-white rounded h-40" src="img/logoSite.png" alt="">
-      <h1>IAMS3</h1>
+<body>
+<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+  <div class="nav-container">
+    <!-- Logo et titre -->
+    <div class="flex items-center">
+      <a href="index.html"><img class="bg-white h-20 rounded-full p-2" src="img/logoSite.png" alt="Logo du site"></a>
+      <a href="index.html"><h1 class="site-title">IAMS3</h1></a>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#facts">Données</a></li>
-        <li><a href="#actions">Actions</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+    <!-- Menu principal avec sous-menu -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+      <a href="#" class="">Team</a>
+      <a href="#" class="">Projects</a>
+      <a href="#" class="">Calendar</a>
+      <a href="#" class="">Reports</a>
+      <!-- Menu déroulant -->
+      <div class="relative group">
+        <a href="#">
+          Sommaire
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+          </svg>
+        </a>
+        <ul class="sous absolute z-10">
+          <li><a href="page3.html">Page n°3</a></li>
+          <li><a href="page4.html">Page n°4</a></li>
+          <li><a href="page5.html">Page n°5</a></li>
+        </ul>
+      </div>
+      <a href="contact.html" class="link-secondary">Contact</a>
     </nav>
   </div>
-</header>
 
+  <!-- Menu responsive -->
+  <nav class="mobile-menu md:hidden flex-row">
+    <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+    <a href="#" class="">Team</a>
+    <a href="#" class="">Projects</a>
+    <a href="#" class="">Calendar</a>
+    <a href="#" class="">Reports</a>
+    <div>
+      <a href="#" class="sommaire">Sommaire</a>
+      <ul class="sous">
+        <li><a href="page3.html">Page n°3</a></li>
+        <li><a href="page4.html">Page n°4</a></li>
+        <li><a href="page5.html">Page n°5</a></li>
+      </ul>
+    </div>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+</header>
+<br><br><br><br>
 <main>
 <!-- Hero Section -->
 <section id="home" class="hero">
@@ -112,8 +151,6 @@
     </div>
   </div>
 </footer>
-  <!-- Add your site or application content here -->
-<!--  <p>Hello world! This is HTML5 Boilerplate.</p>-->
 
   <script src="js/app.js"></script>
 </body>
