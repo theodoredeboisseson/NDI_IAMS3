@@ -1,7 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*import Poppins et Raleway*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*body {*/
-/*  background;*/
+* {
+  /*@apply text-slate-500;*/
+  @apply leading-tight;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-image: url("../img/Fond_Projet.webp");
+  background-size: cover;
+}
+
+main {
+  @apply backdrop-blur m-auto mx-10 rounded-lg shadow-lg ring-1 p-10 bg-teal-900 bg-opacity-50;
+  @apply text-slate-200;
+}
+
+/*!* Menu principal (liens) *!*/
+/*.link-primary {*/
+/*  @apply text-white bg-gray-900 text-sm ;*/
 /*}*/
+
+nav a {
+  @apply
+  /*general*/
+  rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white
+  /*taille normale*/
+  md:text-sm
+  /*responsive*/
+  block text-base
+}
+
+/*!* Titre principal *!*/
+/*.site-title {*/
+/*  @apply text-3xl font-bold text-white ml-4;*/
+/*}*/
+
+/*!* Conteneurs *!*/
+/*.nav-container {*/
+/*  @apply max-w-7xl mx-auto px-4 flex items-center justify-between h-16;*/
+/*}*/
+
+/*.mobile-menu {*/
+/*  @apply px-4 pb-3 pt-2 space-y-1;*/
+/*}*/
+
+/*style du ffrot*/
+/* Style général */
+header {
+  width: 100%;
+  color: white;
+}
+
+.nav-container {
+  @apply max-w-7xl mx-auto px-4 flex items-center justify-between h-16;
+}
+
+.site-title {
+  @apply text-3xl font-bold text-white ml-4;
+}
+
+.link-primary {
+  @apply text-white bg-gray-900 text-sm rounded-md px-3 py-2 font-medium;
+}
+
+.link-secondary {
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium;
+}
+
+/* Sous-menu (Desktop) */
+.sous {
+  @apply bg-gray-700 text-white absolute opacity-0 invisible transition-all duration-300;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.sous li {
+  @apply text-center px-4 py-2 hover:bg-gray-600;
+}
+
+.group:hover .sous {
+  @apply opacity-100 visible;
+}
+
+/* Flèche */
+.arrow {
+  @apply transition-transform duration-500;
+  margin-left: 5px;
+}
+
+.group:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  @apply px-4 pb-3 pt-2 space-y-1;
+}
+
+.sous.mobile {
+  @apply bg-gray-700 text-white visible block mt-2;
+}
+
