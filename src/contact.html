@@ -1,0 +1,128 @@
+<head>
+  <!--Je sais pas c'est quoi-->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="./css/output.css">
+
+  <meta charset="utf-8">
+</head>
+
+<body class=" w-full">
+<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+  <div class="nav-container">
+    <!-- Logo et titre -->
+    <div class="flex items-center">
+      <a href="index.html"><img class="bg-white h-20 rounded-full p-2" src="img/logoSite.png" alt="Logo du site"></a>
+      <a href="index.html"><h1 class="site-title">IAMS3</h1></a>
+    </div>
+
+    <!-- Menu principal avec sous-menu -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+      <a href="#" class="">Team</a>
+      <a href="#" class="">Projects</a>
+      <a href="#" class="">Calendar</a>
+      <a href="#" class="">Reports</a>
+      <!-- Menu déroulant -->
+      <div class="relative group">
+        <a href="#" class="link-secondary sommaire">
+          Sommaire
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+          </svg>
+        </a>
+        <ul class="sous absolute">
+          <li><a href="page3.html">Page n°3</a></li>
+          <li><a href="page4.html">Page n°4</a></li>
+          <li><a href="page5.html">Page n°5</a></li>
+        </ul>
+      </div>
+      <a href="contact.html" class="link-secondary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Menu responsive -->
+  <nav class="mobile-menu md:hidden flex-row">
+    <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+    <a href="#" class="">Team</a>
+    <a href="#" class="">Projects</a>
+    <a href="#" class="">Calendar</a>
+    <a href="#" class="">Reports</a>
+    <div>
+      <a href="#" class="sommaire">Sommaire</a>
+      <ul class="sous">
+        <li><a href="page3.html">Page n°3</a></li>
+        <li><a href="page4.html">Page n°4</a></li>
+        <li><a href="page5.html">Page n°5</a></li>
+      </ul>
+    </div>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+</header>
+<main class="w-full">
+  <section id="contact" class="flex">
+    <div class="container">
+      <br><br>
+      <h2 class="font-bold w-0 text-3xl">Page de contact:</h2>
+      <form action="./traitement.html">
+        <div class="space-y-12">
+          <div class="border-b border-gray-900/10 pb-12">
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-3">
+                <label for="prenom" class="block text-sm/6 font-medium text-gray-900">Prenom</label>
+                <div class="mt-2">
+                  <input type="text" name="prenom" id="prenom" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="nom" class="block text-sm/6 font-medium text-gray-900">Nom</label>
+                <div class="mt-2">
+                  <input type="text" name="nom" id="nom" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+                <div class="mt-2">
+                  <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+              </div>
+              <br>
+              <div class="sm:col-span-4 ">
+                <label for="message" class="block text-sm/6 font-medium text-gray-900">Message</label>
+                <div class="mt-2">
+                    <input type="text" name="userMessage" id="message" autocomplete="address-level1" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+              </div>
+          </div>
+        </div>
+          <div class="mt-6 flex items-center justify-end gap-x-6">
+            <button type="reset" class="text-sm/6 font-semibold text-gray-900">Cancel</button>
+            <input type="submit" value="envoyer" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2024 IAMS3 - Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
