@@ -13,49 +13,31 @@
 }
 
 body{
+  @apply flex flex-col h-full;
   background-image: url("../img/Fond_Projet.webp");
   background-size: cover;
 }
 
 main {
-  @apply backdrop-blur m-auto mx-10 rounded-lg shadow-lg ring-1 p-10 bg-teal-900 bg-opacity-50;
+  @apply backdrop-blur mx-10 my-20 rounded-lg shadow-lg p-10 bg-teal-900 bg-opacity-50;
   @apply text-slate-200;
+  flex-grow: 1;
 }
 
-/*!* Menu principal (liens) *!*/
-/*.link-primary {*/
-/*  @apply text-white bg-gray-900 text-sm ;*/
-/*}*/
+/*HEADER*/
 
 nav a {
   @apply
   /*general*/
-  rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white
+  rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-slate-700 hover:text-white
   /*taille normale*/
   md:text-sm
   /*responsive*/
   block text-base
 }
 
-/*!* Titre principal *!*/
-/*.site-title {*/
-/*  @apply text-3xl font-bold text-white ml-4;*/
-/*}*/
-
-/*!* Conteneurs *!*/
-/*.nav-container {*/
-/*  @apply max-w-7xl mx-auto px-4 flex items-center justify-between h-16;*/
-/*}*/
-
-/*.mobile-menu {*/
-/*  @apply px-4 pb-3 pt-2 space-y-1;*/
-/*}*/
-
-/*style du ffrot*/
-/* Style général */
-header {
-  width: 100%;
-  color: white;
+.mobile-menu {
+  @apply px-4 pb-3 pt-2 space-y-1 text-center;
 }
 
 .nav-container {
@@ -67,31 +49,25 @@ header {
 }
 
 .link-primary {
-  @apply text-white bg-gray-900 text-sm rounded-md px-3 py-2 font-medium;
-}
-
-.link-secondary {
-  @apply text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium;
+  @apply bg-gray-900 text-sm rounded-md;
 }
 
 /* Sous-menu (Desktop) */
-.sous {
-  @apply bg-gray-700 text-white absolute opacity-0 invisible transition-all duration-300;
-  top: 100%;
+.submenu {
+  @apply absolute opacity-0 invisible transition-all duration-300 rounded
+  text-center px-4 py-2 bg-gray-800 backdrop-blur bg-opacity-75;
+  /*top: 100%;*/
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
-  border: 1px solid white;
-  border-radius: 8px;
-  padding: 10px 0;
 }
 
-.sous li {
-  @apply text-center px-4 py-2 hover:bg-gray-600;
+.submenu a {
+  @apply my-2;
 }
 
-.group:hover .sous {
-  @apply opacity-100 visible;
+:hover > .submenu {
+  @apply opacity-100 visible whitespace-nowrap;
 }
 
 /* Flèche */
@@ -100,16 +76,86 @@ header {
   margin-left: 5px;
 }
 
-.group:hover .arrow {
+:hover > .arrow {
   transform: rotate(180deg);
 }
 
-/* Mobile menu */
-.mobile-menu {
-  @apply px-4 pb-3 pt-2 space-y-1;
+.submenu.mobile {
+  @apply visible block mt-2;
 }
 
-.sous.mobile {
-  @apply bg-gray-700 text-white visible block mt-2;
+/*Animations de vagues*/
+
+ body {
+   @apply flex flex-col justify-between;
+   min-height: 100vh;
+ }
+
+ footer{
+   @apply relative w-full bottom-0;
+   height: 100px;
+ }
+
+.wave {
+  @apply absolute w-full top-0;
+  background: url("../img/wave.png");
+  background-size: 1000px 100px;
+  height: 100px;
 }
 
+@keyframes wave-animation {
+  0% {
+    background-position: 1000px;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes wave-animation-reversed {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 1000px;
+  }
+}
+
+#wave1 {
+  animation: 3s wave-animation linear infinite;
+  z-index: 999;
+}
+#wave2 {
+  animation: 5s wave-animation-reversed linear infinite;
+  z-index: 999;
+}
+#wave3 {
+  animation: 6s wave-animation-reversed linear infinite;
+  z-index: 998;
+}
+#wave4 {
+  animation: 4s wave-animation linear infinite;
+  z-index: 998;
+}
+
+/* Personnalisation de la barre de défilement */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ombre légère autour de la barre */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-600;
+}
