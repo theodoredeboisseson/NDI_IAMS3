@@ -25,132 +25,104 @@
 </head>
 
 <body>
-  <header class="bg-gray-800 bg-opacity-50 backdrop-blur">
-    <div class="nav-container">
-      <!-- Logo et titre -->
-      <div class="flex items-center">
-        <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
-        <h1 class="site-title">IAMS3</h1>
-      </div>
 
-      <!-- Menu principal avec sous-menu -->
-      <nav class="hidden md:flex space-x-4 items-center">
-        <a href="#" class="link-primary" aria-current="page">Accueil</a>
-        <a href="#">À propos</a>
-        <a href="#">Reports</a>
-        <!-- Menu déroulant -->
-        <div class="relative">
-          <a href="#" class="flex items-center">
-            Sommaire
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-              <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
-            </svg>
-          </a>
-          <div class="submenu absolute">
-            <a href="page2.html">Page n°2</a>
-            <a href="page3.html">Page n°3</a>
-            <a href="page4.html">Page n°4</a>
-            <a href="page5.html">Page n°5</a>
-            <a href="page6.html">Page n°5</a>
-          </div>
-        </div>
-        <a href="contact.html" class="link-secondary">Contact</a>
-      </nav>
-    </div>
+  <div id="header"></div>
 
-    <!-- Menu responsive -->
-    <nav class="mobile-menu md:hidden flex-row">
-      <a href="#" class="link-primary" aria-current="page">Dashboard</a>
-      <a href="#" class="">Team</a>
-      <a href="#" class="">Projects</a>
-      <a href="#" class="">Calendar</a>
-      <a href="#" class="">Reports</a>
-      <div>
-        <a href="#" class="sommaire">Sommaire</a>
-        <ul class="submenu">
-          <li><a href="page2.html">Page n°2</a></li>
-          <li><a href="page3.html">Page n°3</a></li>
-          <li><a href="page4.html">Page n°4</a></li>
-          <li><a href="page5.html">Page n°5</a></li>
-          <li><a href="page6.html">Page n°6</a></li>
-        </ul>
-      </div>
-      <a href="contact.html" class="">Contact</a>
-    </nav>
-  </header>
+  <div class="m-auto h-screen flex items-center justify-center">
+    <h1 class="text-white text-5xl bg-gray-800 bg-opacity-50 rounded-lg p-10 backdrop-blur">Nuit de l'Info 2024 - Équipe IAMS3</h1>
+  </div>
 
-  <main class="flex-grow text-center">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h2>Protégeons nos océans</h2>
-        <p>Ensemble, faisons la différence face au réchauffement climatique.</p>
-        <a href="#about" class="btn">En savoir plus</a>
-      </div>
+
+  <main>
+    <section id="home">
+      <h2>Protégeons nos océans</h2>
+      <p>Ensemble, faisons la différence face au réchauffement climatique.</p>
+      <a href="#about" class="btn">En savoir plus</a>
     </section>
-
-    <!-- About Section -->
     <section id="about">
-      <div class="container">
-        <h2>À propos</h2>
-        <div class="about-content">
-          <p>Les océans jouent un rôle clé dans l'équilibre climatique. Découvrez comment notre projet sensibilise aux impacts du réchauffement climatique.</p>
-          <img src="images/ocean-illustration.png" alt="Illustration des océans">
-        </div>
-      </div>
+      <h2>À propos</h2>
+      <p>Les océans jouent un rôle clé dans l'équilibre climatique. Découvrez comment notre projet sensibilise aux impacts du réchauffement climatique.</p>
     </section>
-
-    <!-- Facts Section -->
     <section id="facts">
-      <div class="container">
-        <h2>Chiffres clés</h2>
-        <div class="facts-grid">
-          <div class="fact-item">
-            <h3>70%</h3>
-            <p>de l'oxygène provient des océans.</p>
-          </div>
-          <div class="fact-item">
-            <h3>1°C</h3>
-            <p>augmentation moyenne de la température mondiale.</p>
-          </div>
-          <div class="fact-item">
-            <h3>90%</h3>
-            <p>des grandes espèces marines sont en danger.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Actions Section -->
-    <section id="actions">
-      <div class="container">
-        <h2>Nos actions</h2>
-        <div class="actions-grid">
-          <div class="action-item">
-            <h3>Nettoyage des plages</h3>
-            <p>Organisez ou participez à des initiatives locales.</p>
-          </div>
-          <div class="action-item">
-            <h3>Sensibilisation</h3>
-            <p>Partagez l'importance des océans autour de vous.</p>
-          </div>
-          <div class="action-item">
-            <h3>Réduction des déchets</h3>
-            <p>Adoptez des pratiques écoresponsables.</p>
-          </div>
-        </div>
-      </div>
+      <h2>Chiffres clés</h2>
+      <ul>
+        <li><strong>70%</strong> de l'oxygène provient des océans.</li>
+        <li><strong>1°C</strong> augmentation moyenne de la température mondiale.</li>
+        <li><strong>90%</strong> des grandes espèces marines sont en danger.</li>
+      </ul>
     </section>
   </main>
 
-  <footer class="waves">
-    <div class="wave opacity-25   bottom-4" id="wave1"></div>
-    <div class="wave opacity-50   bottom-6" id="wave2"></div>
-    <div class="wave opacity-75   bottom-2" id="wave3"></div>
-    <div class="wave opacity-100  bottom-0" id="wave4"></div>
-  </footer>
+  <div id="footer"></div>
 
   <script src="js/app.js"></script>
+  <script>
+    async function loadComponent(id, file) {
+      const response = await fetch(file);
+      const text = await response.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent('header', 'header.html');
+    loadComponent('footer', 'footer.html');
+  </script>
 </body>
 
 </html>
+
+<!--<!doctype html>-->
+<!--<html lang="fr">-->
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Océans et Climat - IAMS3</title>-->
+<!--  <link rel="stylesheet" href="./css/style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--  <div class="nav-container">-->
+<!--    <div>-->
+<!--      <img src="img/logoSite.png" alt="Logo IAMS3" class="logo">-->
+<!--      <h1>IAMS3</h1>-->
+<!--    </div>-->
+<!--    <nav>-->
+<!--      <a href="#home">Accueil</a>-->
+<!--      <a href="#about">À propos</a>-->
+<!--      <a href="#facts">Chiffres</a>-->
+<!--      <a href="#actions">Actions</a>-->
+<!--      <a href="contact.html">Contact</a>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</header>-->
+<!--<main>-->
+<!--  <section id="home">-->
+<!--    <h2>Protégeons nos océans</h2>-->
+<!--    <p>Ensemble, faisons la différence face au réchauffement climatique.</p>-->
+<!--    <a href="#about" class="btn">En savoir plus</a>-->
+<!--  </section>-->
+<!--  <section id="about">-->
+<!--    <h2>À propos</h2>-->
+<!--    <p>Les océans jouent un rôle clé dans l'équilibre climatique. Découvrez comment notre projet sensibilise aux impacts du réchauffement climatique.</p>-->
+<!--  </section>-->
+<!--  <section id="facts">-->
+<!--    <h2>Chiffres clés</h2>-->
+<!--    <ul>-->
+<!--      <li><strong>70%</strong> de l'oxygène provient des océans.</li>-->
+<!--      <li><strong>1°C</strong> augmentation moyenne de la température mondiale.</li>-->
+<!--      <li><strong>90%</strong> des grandes espèces marines sont en danger.</li>-->
+<!--    </ul>-->
+<!--  </section>-->
+<!--  <section id="actions">-->
+<!--    <h2>Nos actions</h2>-->
+<!--    <ul>-->
+<!--      <li><strong>Nettoyage des plages :</strong> Organisez ou participez à des initiatives locales.</li>-->
+<!--      <li><strong>Sensibilisation :</strong> Partagez l'importance des océans autour de vous.</li>-->
+<!--      <li><strong>Réduction des déchets :</strong> Adoptez des pratiques écoresponsables.</li>-->
+<!--    </ul>-->
+<!--  </section>-->
+<!--</main>-->
+<!--<footer>-->
+<!--  <p>&copy; 2024 IAMS3 - Tous droits réservés</p>-->
+<!--</footer>-->
+<!--</body>-->
+<!--</html>-->

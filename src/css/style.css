@@ -7,9 +7,12 @@
 @tailwind utilities;
 
 * {
-  /*@apply text-slate-500;*/
-  @apply leading-tight;
+  @apply text-slate-200 font-semibold;
   font-family: 'Poppins', sans-serif;
+}
+
+a {
+  @apply text-blue-400 hover:underline;
 }
 
 body{
@@ -20,8 +23,7 @@ body{
 
 main {
   @apply backdrop-blur mx-10 my-20 rounded-lg shadow-lg p-10 bg-teal-900 bg-opacity-50;
-  @apply text-slate-200;
-  flex-grow: 1;
+  @apply text-center;
 }
 
 /*HEADER*/
@@ -29,7 +31,7 @@ main {
 nav a {
   @apply
   /*general*/
-  rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-slate-700 hover:text-white
+  rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-900 hover:text-white
   /*taille normale*/
   md:text-sm
   /*responsive*/
@@ -48,14 +50,10 @@ nav a {
   @apply text-3xl font-bold text-white ml-4;
 }
 
-.link-primary {
-  @apply bg-gray-900 text-sm rounded-md;
-}
-
 /* Sous-menu (Desktop) */
 .submenu {
   @apply absolute opacity-0 invisible transition-all duration-300 rounded
-  text-center px-4 py-2 bg-gray-800 backdrop-blur bg-opacity-75;
+  text-center px-4 py-2 bg-gray-800 backdrop-blur bg-opacity-75 whitespace-nowrap;
   /*top: 100%;*/
   left: 50%;
   transform: translateX(-50%);
@@ -67,7 +65,7 @@ nav a {
 }
 
 :hover > .submenu {
-  @apply opacity-100 visible whitespace-nowrap;
+  @apply opacity-100 visible ;
 }
 
 /* Flèche */
@@ -76,7 +74,7 @@ nav a {
   margin-left: 5px;
 }
 
-:hover > .arrow {
+.relative:hover .arrow {
   transform: rotate(180deg);
 }
 
@@ -159,3 +157,40 @@ nav a {
 ::-webkit-scrollbar-track {
   @apply bg-slate-600;
 }
+
+
+
+/*body {*/
+/*  font-family: 'Poppins', sans-serif;*/
+/*  background: url("../img/Fond_Projet.webp") no-repeat center center / cover;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*header {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  padding: 10px 20px;*/
+/*  background: rgba(0, 0, 0, 0.5);*/
+/*}*/
+
+/*header .logo {*/
+/*  width: 50px;*/
+/*  height: 50px;*/
+/*  border-radius: 50%;*/
+/*}*/
+
+/*nav a {*/
+/*  text-decoration: none;*/
+/*  color: #ffffff;*/
+/*  margin: 0 10px;*/
+/*}*/
+
+main section {
+  margin-bottom: 20px;
+}
+
+/*footer {*/
+/*  text-align: center;*/
+/*  padding: 10px;*/
+/*  background: #000000;*/
+/*}*/

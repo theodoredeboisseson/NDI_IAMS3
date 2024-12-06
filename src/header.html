@@ -1,0 +1,53 @@
+<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+  <div class="nav-container">
+    <!-- Logo et titre -->
+    <div class="flex items-center">
+      <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
+      <a href="index.html"><h1 class="site-title">IAMS3</h1></a>
+    </div>
+
+    <!-- Menu principal avec sous-menu -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Reports</a>
+      <!-- Menu déroulant -->
+      <div class="relative">
+        <a href="#" class="flex items-center">
+          Sommaire
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+          </svg>
+        </a>
+        <div class="submenu absolute">
+          <a href="page3.html">Page n°3</a>
+          <a href="page4.html">Page n°4</a>
+          <a href="page5.html">Page n°5</a>
+        </div>
+      </div>
+      <a href="contact.html" class="link-secondary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Menu responsive -->
+  <nav class="mobile-menu md:hidden flex-row items-center">
+    <a href="index.html" aria-current="page">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Reports</a>
+    <!-- Menu déroulant -->
+    <div class="relative flex justify-center">
+      <a href="#" class="flex items-center">
+        Sommaire
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+          <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+        </svg>
+      </a>
+      <div class="submenu absolute top-full">
+        <a href="page3.html">Page n°3</a>
+        <a href="page4.html">Page n°4</a>
+        <a href="page5.html">Page n°5</a>
+      </div>
+    </div>
+    <a href="contact.html" class="link-secondary">Contact</a>
+  </nav>
+</header>

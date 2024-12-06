@@ -14,61 +14,11 @@
   <meta charset="utf-8">
 </head>
 
-<body class=" w-full">
-<header class="bg-gray-800 bg-opacity-50 backdrop-blur">
-  <div class="nav-container">
-    <!-- Logo et titre -->
-    <div class="flex items-center">
-      <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
-      <h1 class="site-title">IAMS3</h1>
-    </div>
+<body class="flex flex-col justify-between">
 
-    <!-- Menu principal avec sous-menu -->
-    <nav class="hidden md:flex space-x-4 items-center">
-      <a href="#" class="link-primary" aria-current="page">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Reports</a>
-      <!-- Menu déroulant -->
-      <div class="relative">
-        <a href="#" class="flex items-center">
-          Sommaire
-          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
-          </svg>
-        </a>
-        <div class="submenu absolute">
-          <a href="page2.html">Page n°2</a>
-          <a href="page3.html">Page n°3</a>
-          <a href="page4.html">Page n°4</a>
-          <a href="page5.html">Page n°5</a>
-          <a href="page6.html">Page n°5</a>
-        </div>
-      </div>
-      <a href="contact.html" class="link-secondary">Contact</a>
-    </nav>
-  </div>
+<div id="header"></div>
 
-  <!-- Menu responsive -->
-  <nav class="mobile-menu md:hidden flex-row">
-    <a href="#" class="link-primary" aria-current="page">Dashboard</a>
-    <a href="#" class="">Team</a>
-    <a href="#" class="">Projects</a>
-    <a href="#" class="">Calendar</a>
-    <a href="#" class="">Reports</a>
-    <div>
-      <a href="#" class="sommaire">Sommaire</a>
-      <ul class="submenu">
-        <li><a href="page2.html">Page n°2</a></li>
-        <li><a href="page3.html">Page n°3</a></li>
-        <li><a href="page4.html">Page n°4</a></li>
-        <li><a href="page5.html">Page n°5</a></li>
-        <li><a href="page6.html">Page n°6</a></li>
-      </ul>
-    </div>
-    <a href="contact.html" class="">Contact</a>
-  </nav>
-</header>
-<main class="w-full">
+<main class="w-11/12">
   <section id="contact" class="flex">
     <div class="container">
       <br><br>
@@ -115,16 +65,19 @@
     </div>
   </section>
 </main>
-<footer>
-  <div class="container">
-    <p>&copy; 2024 IAMS3 - Tous droits réservés.</p>
-    <div class="social-links">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-    </div>
-  </div>
-</footer>
+
+<div id="footer"></div>
+
 <script src="js/app.js"></script>
+<script>
+  async function loadComponent(id, file) {
+    const response = await fetch(file);
+    const text = await response.text();
+    document.getElementById(id).innerHTML = text;
+  }
+
+  loadComponent('header', 'header.html');
+  loadComponent('footer', 'footer.html');
+</script>
 </body>
 </html>
