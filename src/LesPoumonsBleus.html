@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Poumons Bleus de la Planète</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004d7a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #004d7a;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    .quiz-options input {
+      margin-right: 10px;
+    }
+    .feedback {
+      font-style: italic;
+      color: #28a745;
+    }
+    .wrong {
+      color: #e74c3c;
+    }
+    .btn {
+      background-color: #004d7a;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #00334d;
+    }
+    .illustration {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .illustration img {
+      max-width: 45%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Les Poumons Bleus de la Planète</h1>
+</header>
+<div class="container">
+  <section>
+    <h2>Introduction</h2>
+    <p>Tout comme vos poumons échangent des gaz essentiels pour votre survie, les océans jouent un rôle crucial dans les échanges gazeux à l’échelle mondiale. Ces vastes étendues bleues absorbent environ <strong>25 % du dioxyde de carbone (CO₂)</strong> émis par les activités humaines et produisent plus de <strong>50 % de l’oxygène</strong> que nous respirons, grâce au phytoplancton.</p>
+  </section>
+
+  <section>
+    <h2>Comparaison Poumons-Humains / Océans</h2>
+    <ul>
+      <li><strong>Poumons humains :</strong> Les poumons permettent d'échanger le dioxygène (O₂) et le dioxyde de carbone (CO₂) avec l’air environnant. Ce processus est vital pour alimenter les cellules en énergie.</li>
+      <li><strong>Océans :</strong>
+        <ul>
+          <li><strong>Absorption du CO₂ :</strong> Les océans capturent une grande partie du CO₂ présent dans l’atmosphère, en partie grâce à leur surface et à des organismes microscopiques comme le phytoplancton.</li>
+          <li><strong>Production d’O₂ :</strong> Lors de la photosynthèse, le phytoplancton utilise l’énergie solaire pour transformer le CO₂ en oxygène.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="illustration">
+      <img src="./img/PoumonHumain.png" alt="Poumons humains">
+      <img src="./img/PoumonOcean.png" alt="Océan et phytoplancton">
+    </div>
+  </section>
+
+  <section>
+    <h2>Le rôle des océans dans la régulation climatique</h2>
+    <p>En absorbant le CO₂, les océans agissent comme un régulateur naturel du climat. Cependant, cette absorption a un coût : l’acidification des océans. Ce phénomène menace directement les écosystèmes marins, en particulier les coraux et certaines espèces sensibles.</p>
+    <ul>
+      <li>Les océans ont absorbé environ <strong>90 % de la chaleur excédentaire</strong> due au réchauffement climatique.</li>
+      <li>L’acidification a augmenté de <strong>30 %</strong> depuis le début de l’ère industrielle.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Quiz interactif</h2>
+    <p><strong>Quel pourcentage de l’oxygène mondial provient des océans ?</strong></p>
+    <div class="quiz-options">
+      <input type="radio" id="optionA" name="oxygen" value="A">
+      <label for="optionA">A. 25 %</label><br>
+      <input type="radio" id="optionB" name="oxygen" value="B">
+      <label for="optionB">B. 50 %</label><br>
+      <input type="radio" id="optionC" name="oxygen" value="C">
+      <label for="optionC">C. 75 %</label><br>
+    </div>
+    <div class="feedback" id="quiz-feedback"></div>
+  </section>
+
+  <section>
+    <h2>Encouragement à l’action</h2>
+    <p>Protéger les océans, c’est préserver nos poumons à tous. Chaque geste compte : réduisez votre empreinte carbone, soutenez des projets de restauration marine et limitez votre consommation de plastique.</p>
+    <a href="https://www.ouest-france.fr/leditiondusoir/2022-07-21/cinq-gestes-simples-qui-aident-vraiment-a-proteger-l-ocean-c36c2cd5-9fc8-460d-9ed4-082e90fe0e5b" class="btn">Découvrir 5 gestes pour protéger l’Océan</a>
+  </section>
+</div>
+
+<script>
+  const options = document.querySelectorAll('input[name="oxygen"]');
+  const feedback = document.getElementById('quiz-feedback');
+
+  options.forEach(option => {
+    option.addEventListener('change', function() {
+      if (this.value === 'B') {
+        feedback.innerHTML = "Bravo ! En effet, les océans sont surnommés <em>les poumons bleus de la planète</em> car ils produisent environ la moitié de l’oxygène terrestre grâce au phytoplancton.";
+        feedback.classList.add('feedback');
+        feedback.classList.remove('wrong');
+      } else {
+        feedback.innerHTML = "Ce n’est pas tout à fait juste. Les océans produisent environ 50 % de l’oxygène mondial. Les forêts tropicales, comme l’Amazonie, complètent cette production.";
+        feedback.classList.add('wrong');
+        feedback.classList.remove('feedback');
+      }
+    });
+  });
+</script>
+</body>
+</html>
