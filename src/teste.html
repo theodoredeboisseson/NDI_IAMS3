@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--Je sais pas c'est quoi-->
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="description" content="">
+    
+    <!--Je sais c'est quoi-->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Océans et Climat - IAMS3</title>
+    <link rel="stylesheet" href="./css/output.css">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Le Cœur de la Terre : Les Courants Marins</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #006994;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .interactive {
+            margin-top: 20px;
+            text-align: center;
+        }
+        img {
+            border-radius: 8px;
+        }
+        .img_mers{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+        <div class="nav-container">
+            <!-- Logo et titre -->
+            <div class="flex items-center">
+                <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
+                <h1 class="site-title">IAMS3</h1>
+            </div>
+            
+            <!-- Menu principal avec sous-menu -->
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="link-primary" aria-current="page">Accueil</a>
+                <a href="#">À propos</a>
+                <a href="#">Reports</a>
+                <!-- Menu déroulant -->
+                <div class="relative">
+                    <a href="#" class="flex items-center">
+                        Sommaire
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <div class="submenu absolute">
+                        <a href="page3.html">Page n°3</a>
+                        <a href="page4.html">Page n°4</a>
+                        <a href="page5.html">Page n°5</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="link-secondary">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Menu responsive -->
+        <nav class="mobile-menu md:hidden flex-row">
+            <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+            <a href="#" class="">Team</a>
+            <a href="#" class="">Projects</a>
+            <a href="#" class="">Calendar</a>
+            <a href="#" class="">Reports</a>
+            <div>
+                <a href="#" class="sommaire">Sommaire</a>
+                <ul class="submenu">
+                    <li><a href="page3.html">Page n°3</a></li>
+                    <li><a href="page4.html">Page n°4</a></li>
+                    <li><a href="page5.html">Page n°5</a></li>
+                </ul>
+            </div>
+            <a href="contact.html" class="">Contact</a>
+        </nav>
+        
+        <h1>Le Cœur de la Terre : Les Courants Marins</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Animation Interactive</h2>
+            <p>Les courants océaniques, comme la circulation thermohaline, jouent un rôle clé dans la régulation du climat mondial. Explorez cette animation pour mieux comprendre.</p>
+            <div class="img_mers">
+                <img src="img/mer.gif" alt="vague de la mers" width="60%">
+            </div>
+        </section>
+        <section class="section">
+            <h2>Comparaison avec le Système Circulatoire Humain</h2>
+            <div class="flex-container">
+                <div class="image-container">
+                    <h3>Système Circulatoire Humain</h3>
+                    <img src="img/Système Circulatoire Humain.jpg" alt="Schéma du cœur humain">
+                </div>
+                <div class="image-container">
+                    <h3>Carte des Courants Marins</h3>
+                    <img src="img/Carte des Courants Marins.jpg" alt="Carte des courants marins">
+                </div>
+            </div>
+            <p>Le cœur humain pompe le sang pour nourrir le corps, tout comme les courants marins distribuent la chaleur et régulent les climats régionaux.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Rôle des Courants dans la Redistribution de la Chaleur</h2>
+            <p>Les courants marins transportent la chaleur des régions équatoriales vers les pôles, aidant à maintenir un équilibre thermique essentiel à la vie sur Terre.</p>
+        </section>
+    </main>
+    <footer class="waves">
+        <div class="wave opacity-25   bottom-4" id="wave1"></div>
+        <div class="wave opacity-50   bottom-6" id="wave2"></div>
+        <div class="wave opacity-75   bottom-2" id="wave3"></div>
+        <div class="wave opacity-100  bottom-0" id="wave4"></div>
+    </footer>
+</body>
+</html>
