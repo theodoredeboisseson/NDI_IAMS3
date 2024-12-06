@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+<head>
+<!--Je sais pas c'est quoi-->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="">
+
+<!--Je sais c'est quoi-->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Océans et Climat - IAMS3</title>
+  <link rel="stylesheet" href="./css/output.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="bg-gray-800 bg-opacity-50 backdrop-blur">
+    <div class="nav-container">
+      <!-- Logo et titre -->
+      <div class="flex items-center">
+        <img class="bg-white size-16 rounded-full p-1" src="img/logoSite.png" alt="Logo du site">
+        <h1 class="site-title">IAMS3</h1>
+      </div>
+
+      <!-- Menu principal avec sous-menu -->
+      <nav class="hidden md:flex space-x-4 items-center">
+        <a href="#" class="link-primary" aria-current="page">Accueil</a>
+        <a href="#">À propos</a>
+        <a href="#">Reports</a>
+        <!-- Menu déroulant -->
+        <div class="relative">
+          <a href="#" class="flex items-center">
+            Sommaire
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M12 2L2 22h20L12 2z" fill="currentColor" />
+            </svg>
+          </a>
+          <div class="submenu absolute">
+            <a href="page3.html">Page n°3</a>
+            <a href="page4.html">Page n°4</a>
+            <a href="page5.html">Page n°5</a>
+          </div>
+        </div>
+        <a href="contact.html" class="link-secondary">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Menu responsive -->
+    <nav class="mobile-menu md:hidden flex-row">
+      <a href="#" class="link-primary" aria-current="page">Dashboard</a>
+      <a href="#" class="">Team</a>
+      <a href="#" class="">Projects</a>
+      <a href="#" class="">Calendar</a>
+      <a href="#" class="">Reports</a>
+      <div>
+        <a href="#" class="sommaire">Sommaire</a>
+        <ul class="submenu">
+          <li><a href="page3.html">Page n°3</a></li>
+          <li><a href="page4.html">Page n°4</a></li>
+          <li><a href="page5.html">Page n°5</a></li>
+        </ul>
+      </div>
+      <a href="contact.html" class="">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow text-center">
+    <section id="map">
+      <h2 class="text-2xl font-bold mb-4">Explorez la Biodiversité Marine</h2>
+      <p class="mb-6">Découvrez la diversité des écosystèmes marins tels que les récifs coralliens, les forêts de kelp et bien plus encore. Naviguez sur la carte interactive ci-dessous.</p>
+      <div id="interactive-map" class="h-96 bg-gray-700 rounded-lg flex justify-center items-center">
+        <p>Carte interactive en cours de développement...</p>
+      </div>
+    </section>
+
+    <section id="comparison" class="mt-10">
+      <h2 class="text-2xl font-bold mb-4">Un Écosystème Connecté</h2>
+      <p>Tout comme le système nerveux humain, les écosystèmes marins forment un réseau interconnecté où chaque élément joue un rôle crucial pour maintenir l'équilibre global.</p>
+      <ul class="list-disc list-inside mt-4">
+        <li><strong>Récifs coralliens :</strong> Protègent les côtes et abritent une biodiversité incroyable.</li>
+        <li><strong>Forêts de kelp :</strong> Produisent de l'oxygène et servent d'habitat pour de nombreuses espèces.</li>
+        <li><strong>Zones abyssales :</strong> Absorbent le carbone et stabilisent le climat.</li>
+      </ul>
+    </section>
+
+    <section id="game" class="mt-10">
+      <h2 class="text-2xl font-bold mb-4">Jeu : Identifiez les Écosystèmes</h2>
+      <p class="mb-6">Testez vos connaissances en identifiant les écosystèmes marins sur une carte interactive. Cliquez sur une zone pour découvrir son rôle unique dans l'équilibre global.</p>
+      <div class="h-96 bg-gray-700 rounded-lg flex justify-center items-center">
+        <p>Jeu interactif en cours de développement...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="waves">
+    <div class="wave opacity-25   bottom-4" id="wave1"></div>
+    <div class="wave opacity-50   bottom-6" id="wave2"></div>
+    <div class="wave opacity-75   bottom-2" id="wave3"></div>
+    <div class="wave opacity-100  bottom-0" id="wave4"></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
